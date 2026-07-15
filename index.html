@@ -3,15 +3,5 @@
 const CODES = ["8IQr6r","snIj6LUE","fzW5IF9","c1q1j","jMHZs8D","l0r3","nd3rh3z","QQg0v4Y","4rMiR","TG94G","trW5","hK1OXSK","UGHofSf","WhgVg","2yzhY","MsQiWHb0","8Q01BfI","q9sVf9qv","VP8MuT","o0329","6Zxh","XbUKKt","FyhmSh","kedjHyJ","RrGtAa","K4k2Jz","dNH1VhOl","GteKxf","HW0z5dk3","35yJ6Zs","HK8Y","G6vRLSkN","2TXQw","xk3s","Gp0G","87KNF","d1bS","Y5wG","N0ms","9MS7d","rKQp","ZiqBSS","LS3TAIS5","YRegCAp","lSMX","niCG","BQo6","oIZKKr","zJY24r","Ti2B4VZ","ErJy8o6e","gT9zLvL","j2i1U","M24O05U","fDfdNx","N780j8","S6RK6P","tVBi0","0mbvh","C9nawkG","iOdbXC2","lUfXfAAs","XmISb6","KMlOhFY","H4PuvD2","eZexT7M","itjvOUO","1dZ50wW","OJIF","g023yDx","N206LC","Q0vG","GMRVabd","4BUn","VxPj","ES6c","tGKP66sC","xUtd5","DTdh1zQ","4d4TCw","PezPB3","SopBblL","Jbh2","2Vc5","71qO","1qfj","5MT5Y9","Fp1rUmpt","VUtac","EQK9g9rs","GZDLaw","Z5hr","4G9cdeb","GVv7","3M2SQbZO","lg8Lnqnh","iegz","x7M4c","YxThUE","KhZXYk","6a52I16","XWhX5dV4","cv6TC0q","zoDW8","N0FkZP","cWUaB","gQ9pS","MdrEOn","2uWxx","wHt2oQa","q45ym","aN3M","XoVc","l26EMs","LJJSrdD","uYawlk","dyFY","06wLwJ","z2mG0am","Zma1y","E6Ie","ALCxh","nwV0dY9m","jl3t","QcbZ","MXgCSp","mdAe","Wnk28Ov","cp4ueI","8BBZY","gJsO17x","KmImm","ljT3pQ6","LNhS","1UySp32X","nyjdKY6","Qmd8Il","a5IIDG","zLLXMUk","Ri56X","dzFz","Oj8VA","pRf7Jjt","IauivZ1","qmHa","Af1g5V","b116Z6","XV1wOS","kK69U","jReExnP","IicJYvD0","GTUjmWdC","grdU9t","deS6J4","OtadTJR","tYiRE","zczF","ERQ5jBO9","FLdmc","2wDLP","qFXduz","yYLArcOj","fOQzP","YezHpvV","l4dLRNA","VHhH","AdoZVXe3","yE15VH","CiH1E","ODFEE","2I2l","EM4z4","uxLC1A","DbX8Qv","kOsx4","fwWd9Yi","bOphYh","BQfum","un1cn","eX5JmB","9fPkcTGk","qZOyo","pzbD37V","k7MKRKq","MR19s","zfOCp","Lindl","9tAKWv","49FbkhV","B5Q041j","2nj25N","1Jk50B","TO5jFrq","1p6d","RTkQVZ","rnTga0","OCwlX","7DNV","OWtR","9pUrqJK","P5d0bwg","vVUbJ","KsHQ5S0","lpYUQg","4XSpevZH","qriq","Oj2Fo","jmoyaS","3KKdZcz","ZtSnH0C","uuC0XPG","1eA2jeCq","hjBdLN","DP8njH","kyIi","SKCT","p34sdsO","EUTmN","DKc2T","qiedvKn","ZvAegyN","ZbG1","aHkz0h","c8cxPTBH","vGefvIv","OZfHWsH","ZxWYv","UWyM","aOp5YRHx","ZNNGy","eS0FbmB","vQRvae","E7cBVq","Yoko","cOUhv","tKD7OfY","9OpMa","ENgzviT8","bd4uYw","ENuR","lZ2K","WaRKAEzG","aGqs64d","xuXVhEG","cRhF","4kAxQ","q8chzy","cWOa1","G4RSpb","4vMZggg","1blHtEA","o2HpPmMW","jLiLFp","60OT6","gVZs3dR","LLEH","31oIZ","VAro","hB8NDb2","FBbAfxz","zfVQZSL","CqKV9","yHjogGaf","WIbtJV","tVcg","fpvwMH1","Kif6r3","epoG9yB","Bw5r304x","NhtdT","WjEd","c6OETZ","dDqyR","x1pS","OYqOxd0","pvyfw","3YH6yJ4","G2yBY","RzGitc"];
 const BASE = "https://vipshort.in/";
 
-(function(){
-  var state, now = Date.now();
-  try { state = JSON.parse(localStorage.getItem("rotate_state")); } catch(e){}
-  if (!state || !state.nextAt || now >= state.nextAt) {
-    var code = CODES[Math.floor(Math.random() * CODES.length)];
-    var min = 13 + Math.floor(Math.random() * 8);
-    localStorage.setItem("rotate_state", JSON.stringify({ code: code, nextAt: now + min * 60000 }));
-    state = { code: code, nextAt: now + min * 60000 };
-  }
-  location.replace(BASE + state.code);
-})();
+location.replace(BASE + CODES[Math.floor(Math.random() * CODES.length)]);
 </script>
